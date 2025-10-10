@@ -29,17 +29,23 @@
                 <Label                   
                     Grid.Row="0"
                     Grid.Column="0"
-                    Text="Peso en kilogramos:"/>
+                    Text="Peso en kilogramos:"
+                    FontSize="Small"/>
                 <Entry
                     Grid.Row="1"
-                    Grid.Column="0"/>
+                    Grid.Column="0"
+                    FontSize="Small"
+                    x:Name="PesoEntry"/>
                 <Label
                     Text="Estatura en metros"
                     Grid.Row="2"
-                    Grid.Column="0"/>
+                    Grid.Column="0"
+                    FontSize="Small"/>
                 <Entry
                     Grid.Row="3"
-                    Grid.Column="0"/>
+                    Grid.Column="0"
+                    FontSize="Small"
+                    x:Name="EstaturaEntry"/>
             </Grid>
 
         </Border>
@@ -50,13 +56,15 @@
             HorizontalOptions="Center"
             VerticalOptions="Center"
             Spacing="36">
-            
+
             <Button
                 FontSize="Small"
-                Text="Calcular"/>
+                Text="Calcular"
+                Clicked="OnCalcularButtonClicked"/>
             <Button
                 FontSize="Small"
-                Text="Limpiar"/>
+                Text="Limpiar"
+                Clicked="OnLimpiarButtonClicked"/>
 
         </HorizontalStackLayout>
 
@@ -87,7 +95,8 @@
                    FontSize="Medium"
                    Grid.Row="1"  
                    Grid.Column="0"                   
-                   Text="24.123"/>
+                   Text=""
+                   x:Name="ImcLabel"/>
 
                 <Label
                     FontSize="Small"
@@ -98,10 +107,11 @@
                 <Label
                     HorizontalOptions="Center"
                     FontAttributes="Bold"
+                    Text=""
                     FontSize="Medium"
                     Grid.Row="3"
                     Grid.Column="0"
-                    Text="Peso normal"/>
+                    x:Name="SituacionNutriLabel"/>
 
 
             </Grid>
